@@ -9,3 +9,7 @@ CSS 学习
 + [5. 选择器](chapter/05.选择器.md)
 + [6. 选择器的优先级](chapter/06.选择器的优先级.md)
 + [7. 盒子模型](chapter/07.盒子模型.md)
++ [8. float上](chapter/08.float上.md)
++ [9. float下](chapter/09.float下.md)
++ [10. display](chapter/10.display.md)
++ [11. position](chapter/11.position.md)
