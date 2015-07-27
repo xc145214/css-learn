@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>transition 动画</title>
+</head>
+<style>
+    .img1 {
+        height: 45px;
+        width: 45px;
+    }
+
+    .img1:hover {
+        height: 450px;
+        width: 450px;
+    }
+    .img2 {
+        transition: 1s;
+        height: 45px;
+        width: 45px;
+    }
+
+    .img2:hover {
+        height: 450px;
+        width: 450px;
+    }
+    .img3 {
+        transition: 1s height;
+        height: 45px;
+        width: 45px;
+    }
+
+    .img3:hover {
+        height: 450px;
+        width: 450px;
+    }
+    .img4 {
+        transition: 1s height, 1s width;
+        height: 45px;
+        width: 45px;
+    }
+
+    .img4:hover {
+        height: 450px;
+        width: 450px;
+    }
+    .img5 {
+        height: 45px;
+        width: 45px;
+        display: block;
+        margin:15px auto;
+        transition:1s height, 1s 1s width;
+    }
+
+    .img5:hover {
+        height: 450px;
+        width: 450px;
+    }
+    .img6 {
+        height: 45px;
+        width: 45px;
+        display: block;
+        margin:15px auto;
+        transition: 1s height cubic-bezier(.83,.97,.05,1.44);
+    }
+
+    .img6:hover {
+        height: 450px;
+        width: 450px;
+    }
+</style>
+<body>
+<h1>无动画</h1>
+
+<img class="img1" src="../img/finace.jpg">
+
+<h1>指定时间</h1>
+
+<img class="img2" src="../img/finace.jpg">
+
+<h1>指定时间 高度</h1>
+
+<img class="img3" src="../img/finace.jpg">
+
+
+<h1>指定时间 高度 宽度</h1>
+
+<img class="img4" src="../img/finace.jpg">
+
+<h1>指定时间 高度 宽度 transition-delay</h1>
+
+<img class="img5" src="../img/finace.jpg">
+
+<h1>指定时间 动画速度</h1>
+
+<img class="img6" src="../img/finace.jpg">
+</body>
+</html>

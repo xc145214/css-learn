@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>transition 动画</title>
+</head>
+<style>
+    .animat1 {
+        height: 150px;
+        width: 150px;
+        border: 1px black dotted;
+    }
+
+    @keyframes rainbow {
+        0% { background: #c00; }
+        50% { background: orange; }
+        100% { background: yellowgreen; }
+    }
+
+    .animat1:hover{
+        -webkit-animation: 1s rainbow;
+        -o-animation: 1s rainbow;
+        animation: 1s rainbow;
+    }
+
+
+    .animat2 {
+        height: 150px;
+        width: 150px;
+        border: 1px black dotted;
+    }
+
+    .animat2:hover{
+        -webkit-animation: 1s rainbow infinite;
+        -o-animation: 1s rainbow infinite;
+        animation: 1s rainbow infinite;
+    }
+
+
+    @keyframes pound{
+        from { transform: none; }
+        to { transform: scale(1.2); }
+    }
+    .animat3 {
+        height: 150px;
+        width: 150px;
+        background-color: red;
+        border: 1px black dotted;
+    }
+
+    .animat3:hover{
+        -webkit-animation: .3s pound infinite;
+        -o-animation: .3s pound infinite;
+        animation: .3s pound infinite;
+    }
+
+
+
+    .animat4 {
+        height: 150px;
+        width: 150px;
+        border: 1px black dotted;
+    }
+
+    .animat4:hover{
+        -webkit-animation: 1s rainbow forwards;
+        -o-animation: 1s rainbow forwards;
+        animation: 1s rainbow forwards;
+    }
+
+    @keyframes rainbow2 {
+        0% { background-color: yellow; }
+        100% { background: blue; }
+    }
+
+    .animat5 {
+        height: 150px;
+        width: 150px;
+        border: 1px black dotted;
+    }
+
+    .animat5:hover{
+        -webkit-animation: 1s rainbow2 3 normal;
+        -o-animation: 1s rainbow2 3 normal;
+        animation: 1s rainbow2 3 normal;
+
+
+    }
+
+
+    @keyframes typing { from { width: 0; } }
+    @keyframes blink-caret { 50% { border-color: transparent; } }
+
+    h4 {
+        font: bold 200% Consolas, Monaco, monospace;
+        border-right: .1em solid;
+        width: 16.5em; /* fallback */
+        width: 30ch; /* # of chars */
+        margin: 2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 10s steps(30, end), /* # of steps = # of chars */
+        blink-caret .5s step-end infinite alternate;
+    }
+
+
+    .bar1{
+        width: 9em;
+        padding: .6em 1em;
+        margin: 1em auto;
+        background: yellowgreen;
+    }
+    @keyframes spin {
+        to {
+            -webkit-transform: rotate(1turn);
+        }
+    }
+
+    @-webkit-keyframes spin {
+        to {
+            -webkit-transform: rotate(1turn);
+        }
+    }
+
+    .bar1:hover {
+        animation: spin 1s linear infinite;
+        -webkit-animation: spin 1s linear infinite;
+    }
+
+
+    .bar2{
+        width: 9em;
+        padding: .6em 1em;
+        margin: 1em auto;
+        background: yellowgreen;
+    }
+    .bar2 {
+        animation: spin 1s linear infinite;
+        animation-play-state: paused;
+    }
+
+    .bar2:hover {
+        animation-play-state: running;
+    }
+
+
+</style>
+<body>
+
+<h4>悬停动画</h4>
+<div class="animat1"></div>
+
+<h4>连续动画</h4>
+<div class="animat2"></div>
+
+
+<h4>心脏跳动</h4>
+<div class="animat3"></div>
+
+<h4>停留在动画结束状态</h4>
+<div class="animat4"></div>
+
+
+<h4>动画循环方向</h4>
+<div class="animat5"></div>
+
+
+<h4>打字机动画</h4>
+
+
+<h4>动画停止恢复原状</h4>
+<div class="bar1"></div>
+
+<h4>动画停止不恢复原状</h4>
+<div class="bar2"></div>
+
+</body>
+</html>
