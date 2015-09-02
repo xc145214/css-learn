@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            border: solid blue 1px;
+        }
+
+        .box-text{
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1">
+        <h1 class="box-text">1</h1>
+    </div>
+    <div class="box1">
+        <h1 class="box-text">2</h1>
+    </div>
+</div>
+</body>
+</html>
